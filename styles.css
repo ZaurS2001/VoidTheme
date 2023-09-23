@@ -1,0 +1,167 @@
+@font-face {
+    font-family: Void;
+    src: url("gfx/Void.ttf");
+}
+@font-face {
+    font-family: TheWyoming;
+    src: url("gfx/TheWyomingFont.ttf");
+}
+body {
+    font-family: Void;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+p {
+    margin: 0;
+    font-size: 15px;
+}
+.menu-item {
+    display: none;
+    background-color: black;
+    border: 2px solid rgb(31, 31, 31);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+.menu-item:hover {
+    background-color: rgb(54, 54, 54);
+}
+.menu-item:active {
+    background-color: rgb(183, 183, 183);
+}
+.menu-item:active .menu-item-gfx {
+    filter: invert(100%);
+}
+.menu-item-gfx {
+    width: 27px;
+}
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgb(35, 35, 35);
+    border-bottom: 2px solid rgb(16, 16, 16);
+}
+.nav-bar {
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    padding: 5px;
+}
+.nav-elem {
+    padding: 15px 20px;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+.nav-elem:hover {
+    color:rgb(183, 183, 183);
+}
+.nav-elem:active {
+    color:rgb(115, 115, 115);
+}
+.nav-elem-m {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(15, 15, 15);
+}
+.nav-elem-m:hover {
+    background-color:rgb(38, 38, 38);
+}
+.nav-elem:last-child {
+    margin: 0 0 0 10px;
+}
+.nav-bar-mobile {
+    background: rgb(32, 32, 32);
+}
+.main-page {
+    background: rgb(38, 38, 38);
+    background-image: url("gfx/noise_test.png");
+    padding: 20px;
+}
+.padded {
+    font-family: TheWyoming;
+    font-size: 22px;
+    margin: 15px 0px;
+}
+h1 {
+    font-family: TheWyoming;
+}
+.flex-homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+.play-now {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.pn-button, .quit-button {
+    font-family: TheWyoming;
+    font-size: 30px;
+    background-color: rgb(27, 27, 27);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+}
+.pn-button:hover, .quit-button:hover {
+    background-color: rgb(58, 58, 58);
+}
+.pn-button:active .quit-button:active {
+    background-color: rgb(182, 182, 182);
+    color: black;
+}
+.home-text-cont {
+    width: 60%;
+    padding: 40px 0px;
+}
+.splash-covers {
+    width: 325px;
+    height: 325px;
+}
+.footer {
+    font-family: TheWyoming;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 35px;
+    padding: 0px 20px;
+    font-size: 18px;
+}
+@media screen and (max-width: 668px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu-item {
+        display: block;
+    }
+    .home-text-cont {
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .flex-homepage {
+        flex-direction: column;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+    .splash-covers {
+        width: 55%;
+        height: 55%;
+    }
+    .padded {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 668px) and (max-width: 1000px) {
+    .padded {
+        font-size: 19px;
+    }
+    .splash-covers {
+        width: 35%;
+        height: 35%;
+    }
+}
